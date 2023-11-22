@@ -305,6 +305,7 @@ const RecipeDetailsScreen = (props) => {
             <View className="space-y-1">
               {meal?.strInstructions.split(".").map((elem, index) => (
                 <Text
+                  key={index}
                   style={{
                     fontSize: hp(1.8),
                   }}
