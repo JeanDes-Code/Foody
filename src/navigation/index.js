@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import HomeScreen from "../screen/HomeScreen";
 import WelcomeScreen from "../screen/WelcomeScreen";
+import RecipeDetailsScreen from "../screen/RecipeDetailsScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ function AppNavigation() {
           options={{ gestureEnabled: false }}
         />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        <Stack.Screen name="RecipeDetails" component={RecipeDetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
