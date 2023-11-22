@@ -20,23 +20,19 @@ const Recipes = ({ categories, recipes }) => {
         Recipes
       </Text>
       <View>
-        {categories.length === 0 || recipes.length === 0 ? (
-          <Loading size="large" className="mt-20" color="#f59e0b" />
-        ) : (
-          <MasonryList
-            data={recipes}
-            keyExtractor={(item) => item.idMeal}
-            numColumns={2}
-            showsVerticalScrollIndicator={false}
-            renderItem={({ item, i }) => (
-              <RecipeCard item={item} navigation={navigation} index={i} />
-            )}
-            // refreshing={isLoadingNext}
-            // onRefresh={() => refetch({first: ITEM_CNT})}
-            onEndReachedThreshold={0.1}
-            // onEndReached={() => loadNext(ITEM_CNT)}
-          />
-        )}
+        <MasonryList
+          data={recipes}
+          keyExtractor={(item) => item.idMeal}
+          numColumns={2}
+          showsVerticalScrollIndicator={false}
+          renderItem={({ item, i }) => (
+            <RecipeCard item={item} navigation={navigation} index={i} />
+          )}
+          // refreshing={isLoadingNext}
+          // onRefresh={() => refetch({first: ITEM_CNT})}
+          onEndReachedThreshold={0.1}
+          // onEndReached={() => loadNext(ITEM_CNT)}
+        />
       </View>
     </View>
   );

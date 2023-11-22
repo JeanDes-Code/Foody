@@ -31,6 +31,7 @@ export default function HomeScreen() {
   };
   const getCategories = async () => {
     try {
+      setIsLoading(true);
       const response = await axios.get(
         "https://themealdb.com/api/json/v1/1/categories.php"
       );
@@ -39,10 +40,13 @@ export default function HomeScreen() {
       }
     } catch (err) {
       console.log("error: ", err.message);
+    } finally {
+      setIsLoading(false);
     }
   };
   const getRecipes = async (category = "Beef") => {
     try {
+      setIsLoading(true);
       const response = await axios.get(
         `https://themealdb.com/api/json/v1/1/filter.php?c=${category}`
       );
@@ -51,6 +55,8 @@ export default function HomeScreen() {
       }
     } catch (err) {
       console.log("error: ", err.message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
