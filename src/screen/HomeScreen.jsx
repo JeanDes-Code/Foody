@@ -75,8 +75,9 @@ export default function HomeScreen() {
     try {
       setIsLoading(true);
       setRecipes([]); // Réinitialisez les recettes avant de commencer une nouvelle recherche
+      const formattedQuery = query.replace(/\s/g, "").toLowerCase();
       const response = await axios.get(
-        `https://themealdb.com/api/json/v1/1/search.php?s=${query}`,
+        `https://themealdb.com/api/json/v1/1/search.php?s=${formattedQuery}`,
         {
           cancelToken: newCancelToken.token,
         }
