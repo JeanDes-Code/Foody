@@ -1,5 +1,7 @@
-# FOODY - a react native mobile application #
+# FOODY - A React Native Mobile Application
 
-This mobile app is using a public API to provide meal recipes to users. Let's cook !
+This mobile app is using a public API to provide meal recipes to users. Let's cook!
 
-Ask me for a demo : https://jean-desauw.fr/contact
+![Home Screen](./IMG_0594.PNG)
+
+Ask me for a demo: [Contact Jean Desauw](https://jean-desauw.fr/contact)
